@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 
 from polynomial_fitting import PolynomialFitting
 
-matplotlib.use('TkAgg')  # Use a suitable interactive backend like Agg
+matplotlib.use('Agg')
 
 from matplotlib import pyplot as plt
 
@@ -69,7 +69,7 @@ if __name__ == '__main__':
     # plt.show()
 
     # Save the scatter plot as an image
-    plt.savefig('./color_bar_by_year_temperature_vs_dayOfYear.png')
+    plt.savefig('color_bar_by_year_temperature_vs_dayOfYear.png')
 
     # Close the scatter plot figure
     plt.close()
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     plt.ylabel('Standard Deviation of Daily Temperatures')
     plt.title('Standard Deviation of Daily Temperatures by Month in Israel')
     # plt.show()
-    plt.savefig('./std_daily_temperatures_by_month_Israel.png')
+    plt.savefig('std_daily_temperatures_by_month_Israel.png')
 
     plt.close()
 
@@ -100,7 +100,7 @@ if __name__ == '__main__':
         xaxis_title="Month",
         yaxis_title="Average Temperature"
     )
-    fig.write_html('./mean_monthly_temperature_by_country.html')
+    fig.write_html('mean_monthly_temperature_by_country.html')
     # fig.show()
 
     # Question 5 - Fitting model for different values of `k`
@@ -148,7 +148,7 @@ if __name__ == '__main__':
     plt.title('Test Error for Polynomial Models of Different Degrees')
     plt.xticks(degrees)
     #plt.show()
-    plt.savefig("./loss_by_degree_in_Israel.png")
+    plt.savefig("loss_by_degree_in_Israel.png")
     plt.close()
 
     # Question 6 - Evaluating fitted model on different countries
@@ -181,5 +181,5 @@ if __name__ == '__main__':
         plt.text(i, errors_by_country[country], f'{errors_by_country[country]:.2f}', ha='center', va='bottom')
 
     # plt.show()
-    plt.savefig("./model_loss_by_country_k=3.png")
+    plt.savefig("model_loss_by_country_k=3.png")
     plt.close()
