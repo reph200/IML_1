@@ -223,3 +223,4 @@ if __name__ == '__main__':
     # plt.show()
     plt.savefig('average_loss_vs_training_size.png')
     plt.close()
+    print("gangsta")
