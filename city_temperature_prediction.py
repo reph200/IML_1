@@ -183,4 +183,3 @@ if __name__ == '__main__':
     # plt.show()
     plt.savefig("model_loss_by_country_k=3.png")
     plt.close()
-    print("hello")
