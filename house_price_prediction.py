@@ -3,7 +3,6 @@ import os
 import numpy as np
 import pandas as pd
 
-# TODO: ChatGPT assistance
 import matplotlib
 
 from linear_regression import LinearRegression
@@ -165,7 +164,7 @@ if __name__ == '__main__':
 
     # Question 4 - Feature evaluation of train dataset with respect to response
     feature_evaluation(X_preprocessed_train, y_preprocessed_train,
-                       output_path="./features_vs_response_plots_for_training_data")
+                       output_path="features_vs_response_plots_for_training_data")
 
     # Question 5 - preprocess the test data
     X_preprocessed_test = preprocess_test(X_test)
@@ -222,5 +221,5 @@ if __name__ == '__main__':
                      label='Confidence Interval')
 
     # plt.show()
-    plt.savefig('./average_loss_vs_training_size.png')
+    plt.savefig('average_loss_vs_training_size.png')
     plt.close()
